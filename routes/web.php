@@ -1,10 +1,13 @@
 <?php
 
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\MessageController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\SubcategoryController;
 use App\Http\Controllers\TagsController;
+use App\Http\Controllers\WebsiteController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -25,6 +28,8 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 
 Route::get('/dashboard', [HomeController::class, 'index'])->name('dashboard');
+Route::get('/contact', [ContactController::class, 'index'])->name('contact');
+Route::post('/message', [MessageController::class, 'store'])->name('message');
 
 Route::group(['as'=>'category.','prefix'=>'category'],function(){
 

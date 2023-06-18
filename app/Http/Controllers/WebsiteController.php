@@ -44,10 +44,14 @@ class WebsiteController extends Controller
 
     public function show($id)
     {
+        $menuItems = MenuItem::orderBy('order')->get();
         $view = News::find($id);
         $view->increment('post_view');
+        
+        $categories = Category::all();
+        $tags = Tags::all();
 
-        return view('frontend.postshow');
+        return view('frontend.postshow',compact('menuItems', 'view','categories','tags'));
 
 
     }
