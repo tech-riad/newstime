@@ -10,6 +10,8 @@ class NewsController extends Controller
     {
 
         return view('backend.news.news');
+
+        
     }
 
 }
