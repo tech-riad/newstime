@@ -57,7 +57,13 @@
                                     @foreach ($news as $c)
                                     <tr>
                                         <td>{{@$c->title}}</td>
-                                        <td>{{@$c->image}}</td>
+                                        <td>
+                                            @if($c->image)
+                                            <img src="{{ asset($c->image) }}" alt="Image" width="50" height="50">
+                                        @else
+                                            No Image
+                                        @endif
+                                        </td>
                                         <td>{{@$c->category->category_name}}</td>
                                         <td>{{@$c->subcategory->name}}</td>
                                         <td>{{@$c->post_view}}</td>

@@ -9,7 +9,8 @@
             <div class="row">
                 <div class="col-lg-12">
 
-                    <form action="{{ isset($news)? route('news.update',$news->id) : route('news.store') }}" method="post">
+                    <form action="{{ isset($news)? route('news.update',$news->id) : route('news.store') }}" method="post"
+                        enctype="multipart/form-data">
                         @csrf
                         @if(isset($news))
                         @method('PUT')
@@ -55,18 +56,19 @@
                                         onchange="document.getElementById('image').src = window.URL.createObjectURL(this.files[0])"
                                         class="@error('image') is-invalid @enderror">
                                     <label class="custom-file-label" for="customFile">Choose Image</label>
+
                                     @if($errors->has('image'))
                                     <div class="error">{{ $errors->first('image') }}</div>
                                     @endif
                                 </div>
                                 <img class="mt-2" id="image" alt="image" width="100" height="100" />
-                                @if (isset($news))
-                                <div class="old_image mt-2">
-                                    <label class="mb-0" for="">Old Image:</label><br>
-                                    <img class="mt-2" id="oldimage"
-                                        src="{{isset($news)? Config::get('app.s3_url').$news->image:''}}"
-                                        alt="image" width="100" height="100" />
-                                </div>
+
+                                @if (isset($news) && $news->image)
+                                    <div class="old_image mt-2">
+                                        <label class="mb-0" for="">Old Image:</label><br>
+                                        <img class="mt-2" id="oldimage" src="{{ asset( $news->image) }}"
+                                            alt="image" width="100" height="100" />
+                                    </div>
                                 @endif
                             </div>
                         </div>
@@ -112,7 +114,10 @@
 @endsection
 @push('js')
 <script>
-     $("#accounts_setting").addClass('active');
-     $('#settings-nav').removeClass('d-none');
+
+     $("#image").hide();
+    $("#customFile").change(function () {
+        $("#image").show();
+    });
 </script>
 @endpush
