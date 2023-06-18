@@ -54,14 +54,14 @@
 
                 </li>
                 <li class="nav-item">
-                    <a href="{{url('/resultsheet')}}" class="nav-link">
+                    <a href="#" class="nav-link">
                         <i class="far fa-circle nav-icon"></i>
                         <p>DataTables</p>
                     </a>
                 </li>
                 <li class="nav-header">EXAMPLES</li>
                 <li class="nav-item">
-                    <a href="{{url('/calendar')}}" class="nav-link">
+                    <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-calendar-alt"></i>
                         <p>
                             Calendar
@@ -70,7 +70,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{url('/gallery')}}" class="nav-link">
+                    <a href="#" class="nav-link">
                         <i class="nav-icon far fa-image"></i>
                         <p>
                             Gallery

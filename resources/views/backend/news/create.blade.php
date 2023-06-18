@@ -33,7 +33,9 @@
                                     <select name="category_id" class="form-control" >
                                         <option value="">select</option>
                                         @foreach($categories as $cat)
-                                        <option value="{{$cat->id}}">{{$cat->category_name}}</option>
+                                        <option value="{{ $cat->id }}" {{ $cat->id == $news->category_id ? 'selected' : '' }}>
+                                            {{ $cat->category_name }}
+                                        </option>
                                         @endforeach
                                     </select>
                                 </div>
@@ -44,7 +46,9 @@
                                     <select name="subcategory_id" class="form-control" >
                                         <option value="">select</option>
                                         @foreach($subcategories as $cat)
-                                        <option value="{{$cat->id}}">{{$cat->name}}</option>
+                                        <option value="{{ $cat->id }}" {{ $cat->id == $news->subcategory_id ? 'selected' : '' }}>
+                                            {{ $cat->name }}
+                                        </option>
                                         @endforeach
                                     </select>
                                 </div>
@@ -66,7 +70,7 @@
                                 @if (isset($news) && $news->image)
                                     <div class="old_image mt-2">
                                         <label class="mb-0" for="">Old Image:</label><br>
-                                        <img class="mt-2" id="oldimage" src="{{ asset( $news->image) }}"
+                                        <img class="mt-2" id="oldimage" src="{{ asset($news->image) }}"
                                             alt="image" width="100" height="100" />
                                     </div>
                                 @endif
