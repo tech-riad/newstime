@@ -41,19 +41,9 @@
 
                 <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                     <div class="navbar-nav m-auto">
-                        <a href="index.html" class="nav-item nav-link active">Home</a>
-                        <a href="#" class="nav-item nav-link">Sports</a>
-                        <a href="#" class="nav-item nav-link">Tech</a>
-                        <a href="#" class="nav-item nav-link">Fashion</a>
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Dropdown</a>
-                            <div class="dropdown-menu">
-                                <a href="#" class="dropdown-item">Sub Item 1</a>
-                                <a href="#" class="dropdown-item">Sub Item 2</a>
-                            </div>
-                        </div>
-                        <a href="single-page.html" class="nav-item nav-link">Single Page</a>
-                        <a href="contact.html" class="nav-item nav-link">Contact Us</a>
+                        @foreach($menuItems as $menuItem)
+                            <a href="{{ $menuItem->url }}" class="nav-item nav-link{{ Request::url() == $menuItem->url ? ' active' : '' }}">{{ $menuItem->title }}</a>
+                        @endforeach
                     </div>
                 </div>
             </nav>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\MenuItem;
 use App\Models\News;
 use App\Models\Tags;
 use Illuminate\Http\Request;
@@ -33,9 +34,12 @@ class WebsiteController extends Controller
     $toppopular = News::orderBy('post_view', 'desc')->first();
     $popularnews = News::orderBy('post_view', 'desc')->skip(1)->take(5)->get();
 
+    // Menu
+    $menuItems = MenuItem::orderBy('order')->get();
+
     return view('frontend.index', compact('news', 'featured','sportsnews','technologynews'
                                            ,'businessnews','entertainmentnews','latestTopNews',
-                                           'latestTopsix','categories','tags','popularnews','toppopular'));
+                                           'latestTopsix','categories','tags','popularnews','toppopular','menuItems'));
 }
 
     public function show($id)

@@ -73,6 +73,21 @@ Route::group(['as'=>'news.','prefix'=>'news'],function(){
 
 });
 
+Route::group(['as'=>'menu.','prefix'=>'menu'],function(){
+
+    Route::get('/', [MenuController::class, 'index'])->name('index');
+    Route::get('/create', [MenuController::class, 'create'])->name('create');
+    Route::post('/store', [MenuController::class, 'store'])->name('store');
+    Route::get('/edit/{id}', [MenuController::class, 'edit'])->name('edit');
+    Route::put('/update/{id}', [MenuController::class, 'update'])->name('update');
+    Route::delete('/destroy/{id}', [MenuController::class, 'destroy'])->name('destroy');
+
+});
+
+// Menu Dynamic Route
+
+
+
 
 
 
