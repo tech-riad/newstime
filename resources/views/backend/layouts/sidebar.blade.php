@@ -101,12 +101,16 @@
                                 <p>Sub Category</p>
                             </a>
                         </li>
-
-
                         <li class="nav-item">
                             <a href="{{url('/tag')}}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Tag</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{url('/news')}}" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>news</p>
                             </a>
                         </li>
                         <li class="nav-item">
