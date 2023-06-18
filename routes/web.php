@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\NewsController;
 use App\Http\Controllers\SubcategoryController;
 use App\Http\Controllers\TagsController;
 use Illuminate\Support\Facades\Auth;
@@ -57,6 +58,18 @@ Route::group(['as'=>'tag.','prefix'=>'tag'],function(){
     Route::get('/edit/{id}',[TagsController::class,'edit'])->name('edit');
     Route::put('/update/{id}',[TagsController::class,'update'])->name('update');
     Route::any('/destroy/{id}',[TagsController::class,'destroy'])->name('destroy');
+
+});
+
+// News
+Route::group(['as'=>'news.','prefix'=>'news'],function(){
+
+    Route::get('/',[NewsController::class,'index'])->name('index');
+    Route::get('/create',[NewsController::class,'create'])->name('create');
+    Route::post('/store',[NewsController::class,'store'])->name('store');
+    Route::get('/edit/{id}',[NewsController::class,'edit'])->name('edit');
+    Route::put('/update/{id}',[NewsController::class,'update'])->name('update');
+    Route::any('/destroy/{id}',[NewsController::class,'destroy'])->name('destroy');
 
 });
 
