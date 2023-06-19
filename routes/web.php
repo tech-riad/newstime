@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\GeneralSettingController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MessageController;
 use App\Http\Controllers\NewsController;
@@ -27,10 +28,23 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
-Route::get('/dashboard', [HomeController::class, 'index'])->name('dashboard');
+Route::group(['as'=>'admin.','prefix'=>'admin'],function(){
+    Route::get('/dashboard', [HomeController::class, 'index'])->name('dashboard');
 Route::get('/contact', [ContactController::class, 'index'])->name('contact');
+
 Route::post('/message', [MessageController::class, 'store'])->name('message');
 
+// Message Route
+Route::group(['as'=>'message.','prefix'=>'message'],function(){
+
+    Route::get('/',[MessageController::class,'index'])->name('index');
+    Route::get('/create',[MessageController::class,'create'])->name('create');
+    Route::post('/store',[MessageController::class,'store'])->name('store');
+    Route::any('/edit/{id}',[MessageController::class,'edit'])->name('edit');
+    Route::put('/update',[MessageController::class,'update'])->name('update');
+    Route::any('/destroy/{id}',[MessageController::class,'destroy'])->name('destroy');
+
+});
 Route::group(['as'=>'category.','prefix'=>'category'],function(){
 
     Route::get('/',[CategoryController::class,'index'])->name('index');
@@ -89,7 +103,20 @@ Route::group(['as'=>'menu.','prefix'=>'menu'],function(){
 
 });
 
-// Menu Dynamic Route
+// Setting
+
+Route::group(['as'=>'generalsetting.','prefix'=>'generalsetting
+'],function(){
+    Route::get('/',[GeneralSettingController::class,'edit'])->name('edit');
+    Route::put('/update/{id}',[GeneralSettingController::class,'update'])->name('update');
+
+});
+
+
+
+});
+
+
 
 
 

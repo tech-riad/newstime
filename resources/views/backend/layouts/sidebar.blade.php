@@ -1,6 +1,6 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="{{url('/dashboard')}}" class="brand-link">
+    <a href="{{url('/admin/admin/dashboard')}}" class="brand-link">
         <img src="{{asset('backend/dist/img/AdminLTELogo.png')}}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
             style="opacity: .8">
         <span class="brand-text font-weight-light">News Time24</span>
@@ -38,7 +38,7 @@
                 <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
                 <li class="nav-item">
-                    <a href="{{url('/dashboard')}}" class="nav-link active">
+                    <a href="{{url('/admin/admin/dashboard')}}" class="nav-link active">
                         <i class="nav-icon fas fa-tachometer-alt"></i>
                         <p>Dashboard</p>
                     </a>
@@ -77,6 +77,14 @@
                         </p>
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a href="{{url('/admin/message')}}" class="nav-link">
+                        <i class="nav-icon far fa-envelope-open"></i>
+                        <p>
+                            Message
+                        </p>
+                    </a>
+                </li>
 
 
                 <li class="nav-item">
@@ -90,38 +98,38 @@
                     <ul class="nav nav-treeview">
 
                         <li class="nav-item">
-                            <a href="{{url('/category')}}" class="nav-link">
+                            <a href="{{url('/admin/category')}}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Category</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{url('/subcategory')}}" class="nav-link">
+                            <a href="{{url('/admin/subcategory')}}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Sub Category</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{url('/tag')}}" class="nav-link">
+                            <a href="{{url('/admin/tag')}}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Tag</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{url('/news')}}" class="nav-link">
+                            <a href="{{url('/admin/news')}}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>news</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{url('/contact')}}" class="nav-link">
+                            <a href="{{url('/admin/contact')}}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Contacts</p>
                             </a>
                         </li>
 
                         <li class="nav-item">
-                            <a href="{{url('/contactus')}}" class="nav-link">
+                            <a href="{{url('/admin/contactus')}}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Contact us</p>
                             </a>
@@ -145,6 +153,16 @@
                             </a>
                         </li>
                     </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="{{route('admin.generalsetting.edit')}}" class="nav-link">
+                        <i class="nav-icon fas fa-cog"></i>
+                        <p>
+                            Setting
+
+                        </p>
+                    </a>
+
                 </li>
             </ul>
         </nav>

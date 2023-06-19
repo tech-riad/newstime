@@ -9,7 +9,7 @@
             <div class="row">
                 <div class="col-lg-12">
 
-                    <form action="{{ isset($news)? route('news.update',$news->id) : route('news.store') }}" method="post"
+                    <form action="{{ isset($news)? route('admin.news.update',$news->id) : route('news.store') }}" method="post"
                         enctype="multipart/form-data">
                         @csrf
                         @if(isset($news))

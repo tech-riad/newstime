@@ -22,7 +22,7 @@ class NewsController extends Controller
 
     public function create()
     {
-        $categories = Category::all();
+        $categories    = Category::all();
         $subcategories = Subcategory::all();
 
         return view('backend.news.create', compact('categories', 'subcategories'));
@@ -31,8 +31,8 @@ class NewsController extends Controller
     public function store(Request $request)
 {
     $request->validate([
-        'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-        'title' => 'required',
+        'image'       => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        'title'       => 'required',
         'description' => 'required',
     ]);
 
@@ -49,12 +49,12 @@ class NewsController extends Controller
         $news->image = $destinationPath . $imageName;
     }
 
-    $news->title = $request->title;
-    $news->category_id = $request->category_id;
-    $news->subcategory_id = $request->subcategory_id;
-    $news->description = $request->description;
+    $news->title           = $request->title;
+    $news->category_id     = $request->category_id;
+    $news->subcategory_id  = $request->subcategory_id;
+    $news->description     = $request->description;
 
-    $news->status = $request->status ? true : false;
+    $news->status          = $request->status ? true : false;
 
     $news->save();
 
@@ -81,15 +81,15 @@ class NewsController extends Controller
         $news = News::findOrFail($id);
 
         $request->validate([
-            'title' => 'required',
+            'title'       => 'required',
             'description' => 'required',
-            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'image'       => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
 
 
         if ($request->hasFile('image')) {
             $request->validate([
-                'image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+                'image'  => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             ]);
 
             // Delete the old image if it exists

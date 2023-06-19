@@ -13,7 +13,7 @@
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="{{url('/dashboard')}}">Home</a></li>
+                        <li class="breadcrumb-item"><a href="{{url('/admin/dashboard')}}">Home</a></li>
                         <li class="breadcrumb-item active">Sub Category</li>
                     </ol>
                 </div>
@@ -33,7 +33,7 @@
                         <div class="card-header ">
                             <h3 class="card-title float-left">Sub Category</h3>
                             <div class="card-action float-right">
-                                <a href="{{route('subcategory.create')}}" class="btn btn-primary mr-2"><i class="fa fa-plus"></i> Add Category</a>
+                                <a href="{{route('admin.subcategory.create')}}" class="btn btn-primary mr-2"><i class="fa fa-plus"></i> Add Category</a>
                             </div>
                         </div>
                         <!-- /.card-header -->
@@ -51,8 +51,8 @@
                                         <td>{{$s->name}}</td>
 
                                         <td>
-                                            <a href="{{route('subcategory.edit',$s->id)}}" class="btn btn-success">Edit</a>
-                                            <a href="{{route('subcategory.destroy',$s->id)}}" class="btn btn-danger deleteBtn">Delete</a>
+                                            <a href="{{route('admin.subcategory.edit',$s->id)}}" class="btn btn-success">Edit</a>
+                                            <a href="{{route('admin.subcategory.destroy',$s->id)}}" class="btn btn-danger deleteBtn">Delete</a>
                                         </td>
                                     </tr>
                                     @endforeach

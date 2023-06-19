@@ -28,5 +28,6 @@ class DatabaseSeeder extends Seeder
         $this->call(UserSeeder::class);
         $this->call(SubcategorySeeder::class);
         $this->call(MenuItemSeeder::class);
+        $this->call(GeneralSettingSeeder::class);
     }
 }

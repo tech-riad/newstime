@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('email');
             $table->string('subject');
             $table->longText('message');
+            $table->integer('status')->default(false)->comment('Read=1, Unread=0');
             $table->timestamps();
         });
     }

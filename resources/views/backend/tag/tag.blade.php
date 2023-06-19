@@ -13,7 +13,7 @@
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="{{url('/dashboard')}}">Home</a></li>
+                        <li class="breadcrumb-item"><a href="{{url('/admin/dashboard')}}">Home</a></li>
                         <li class="breadcrumb-item active">Tag</li>
                     </ol>
                 </div>
@@ -33,7 +33,7 @@
                         <div class="card-header ">
                             <h3 class="card-title float-left">Tag</h3>
                             <div class="card-action float-right">
-                                <a href="{{route('tag.create')}}" class="btn btn-primary mr-2"><i class="fa fa-plus"></i> Add Tag</a>
+                                <a href="{{route('admin.tag.create')}}" class="btn btn-primary mr-2"><i class="fa fa-plus"></i> Add Tag</a>
                             </div>
                         </div>
                         <!-- /.card-header -->
@@ -51,8 +51,8 @@
                                         <td>{{$s->name}}</td>
 
                                         <td>
-                                            <a href="{{route('tag.edit',$s->id)}}" class="btn btn-success">Edit</a>
-                                            <a href="{{route('tag.destroy',$s->id)}}" class="btn btn-danger deleteBtn">Delete</a>
+                                            <a href="{{route('admin.tag.edit',$s->id)}}" class="btn btn-success">Edit</a>
+                                            <a href="{{route('admin.tag.destroy',$s->id)}}" class="btn btn-danger deleteBtn">Delete</a>
                                         </td>
                                     </tr>
                                     @endforeach

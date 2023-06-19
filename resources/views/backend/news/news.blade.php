@@ -13,7 +13,7 @@
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="{{url('/dashboard')}}">Home</a></li>
+                        <li class="breadcrumb-item"><a href="{{url('/admin/dashboard')}}">Home</a></li>
                         <li class="breadcrumb-item active">News</li>
                     </ol>
                 </div>
@@ -33,7 +33,7 @@
                         <div class="card-header ">
                             <h3 class="card-title float-left">News</h3>
                             <div class="card-action float-right">
-                                <a href="{{route('news.create')}}" class="btn btn-primary mr-2"><i class="fa fa-plus"></i> Add News</a>
+                                <a href="{{route('admin.news.create')}}" class="btn btn-primary mr-2"><i class="fa fa-plus"></i> Add News</a>
                             </div>
                         </div>
                         <!-- /.card-header -->
@@ -71,8 +71,8 @@
                                         <td>{{@$c->description}}</td>
                                         <td>{{@$c->status}}</td>
                                         <td>
-                                            <a href="{{route('news.edit',$c->id)}}" class="btn btn-success">Edit</a>
-                                            <a href="{{route('news.destroy',$c->id)}}" class="btn btn-danger deleteBtn">Delete</a>
+                                            <a href="{{route('admin.news.edit',$c->id)}}" class="btn btn-success">Edit</a>
+                                            <a href="{{route('admin.news.destroy',$c->id)}}" class="btn btn-danger deleteBtn">Delete</a>
                                         </td>
                                     </tr>
                                     @endforeach

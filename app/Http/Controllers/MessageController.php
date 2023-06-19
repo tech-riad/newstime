@@ -14,7 +14,9 @@ class MessageController extends Controller
      */
     public function index()
     {
-        //
+        $messages = Message::orderBy('created_at', 'desc')->get();
+
+        return view('backend.message.message',compact('messages'));
     }
 
     /**
@@ -75,9 +77,9 @@ class MessageController extends Controller
      * @param  \App\Models\Message  $message
      * @return \Illuminate\Http\Response
      */
-    public function edit(Message $message)
+    public function edit()
     {
-        //
+
     }
 
     /**
@@ -87,9 +89,12 @@ class MessageController extends Controller
      * @param  \App\Models\Message  $message
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Message $message)
+    public function update(Request $request)
     {
-        //
+        $message = Message::find($request->message_id);
+        $message->update([
+            'status' => 1
+        ]);
     }
 
     /**
@@ -98,8 +103,12 @@ class MessageController extends Controller
      * @param  \App\Models\Message  $message
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Message $message)
+    public function destroy($id)
     {
-        //
+        $message = Message::find($id);
+
+        $message->delete();
+
+        return redirect()->back();
     }
 }
