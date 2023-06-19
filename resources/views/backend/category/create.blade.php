@@ -9,7 +9,7 @@
             <div class="row">
                 <div class="col-lg-12">
 
-                    <form action="{{ isset($categories)? route('admin.category.update',$categories->id) : route('category.store') }}" method="post">
+                    <form action="{{ isset($categories)? route('admin.category.update',$categories->id) : route('admin.category.store') }}" method="post">
                         @csrf
                         @if(isset($categories))
                         @method('PUT')

@@ -9,7 +9,7 @@
             <div class="row">
                 <div class="col-lg-12">
 
-                    <form action="{{ isset($news)? route('admin.news.update',$news->id) : route('news.store') }}" method="post"
+                    <form action="{{ isset($news)? route('admin.news.update',$news->id) : route('admin.news.store') }}" method="post"
                         enctype="multipart/form-data">
                         @csrf
                         @if(isset($news))
@@ -93,7 +93,7 @@
                                 <div class="form-check mb-4" >
                                     <input type="checkbox" class="form-check-input status" id="status" name="status" value="1" style="margin-top:15px"
                                         @if(isset($news)){{($news->status == 1)?'checked':''}}@endif>
-                                    <label class="form-check-label" style="margin-left: 5px;margin-top:3px;padding-top: 5px;"
+                                    <label class="form-check-label" style="margin-left:5px;margin-top:3px;padding-top:5px;"
                                         for="status">Status</label>
                                     @if($errors->has('status'))
                                     <div class="error">{{ $errors->first('status') }}</div>

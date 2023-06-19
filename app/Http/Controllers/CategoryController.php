@@ -33,7 +33,7 @@ class CategoryController extends Controller
             'alert-type' =>'success'
         );
 
-        return redirect()->route('category.index')->with($notification);
+        return redirect()->route('admin.category.index')->with($notification);
 
 
     }
@@ -61,7 +61,7 @@ class CategoryController extends Controller
             'alert-type' =>'success'
         );
 
-        return redirect()->route('category.index')->with($notification);
+        return redirect()->route('admin.category.index')->with($notification);
 
     }
 
@@ -74,7 +74,7 @@ class CategoryController extends Controller
             'alert-type' =>'success'
         );
 
-        return redirect()->route('category.index')->with($notification);
+        return redirect()->route('admin.category.index')->with($notification);
 
     }
 }

@@ -9,7 +9,7 @@
             <div class="row">
                 <div class="col-lg-12">
 
-                    <form action="{{ isset($tags)? route('admin.tag.update',$tags->id) : route('tag.store') }}" method="post">
+                    <form action="{{ isset($tags)? route('admin.tag.update',$tags->id) : route('admin.tag.store') }}" method="post">
                         @csrf
                         @if(isset($tags))
                         @method('PUT')

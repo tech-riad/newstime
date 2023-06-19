@@ -29,7 +29,7 @@ class SubcategoryController extends Controller
             'alert-type' =>'success'
         );
 
-        return redirect()->route('subcategory.index')->with($notification);
+        return redirect()->route('admin.subcategory.index')->with($notification);
 
 
     }
@@ -53,7 +53,7 @@ class SubcategoryController extends Controller
             'alert-type' =>'success'
         );
 
-        return redirect()->route('subcategory.index')->with($notification);
+        return redirect()->route('admin.subcategory.index')->with($notification);
 
     }
 
@@ -66,7 +66,7 @@ class SubcategoryController extends Controller
             'alert-type' =>'success'
         );
 
-        return redirect()->route('subcategory.index')->with($notification);
+        return redirect()->route('admin.subcategory.index')->with($notification);
 
     }
 

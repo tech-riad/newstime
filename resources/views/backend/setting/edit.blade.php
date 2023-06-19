@@ -38,7 +38,7 @@
                             @enderror
                         </div>
                         <img class="mt-2 d-none" id="showlogoimage" alt="image" width="100" height="100" />
-                        @if (isset($setting) && $setting->image)
+                        @if ($setting->image)
                                     <div class="old_image mt-2">
                                         <label class="mb-0" for="">Old Image:</label><br>
                                         <img class="mt-2" id="oldimage" src="{{ asset($setting->image) }}"

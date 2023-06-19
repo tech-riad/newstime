@@ -57,7 +57,7 @@ class MessageController extends Controller
         session()->flash('success', 'Message sent successfully.');
 
         // Redirect the user to a thank you page or any other desired destination
-        return redirect()->route('contact');
+        return redirect()->route('admin.contact');
     }
 
     /**

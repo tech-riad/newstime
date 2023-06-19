@@ -31,7 +31,7 @@ class TagsController extends Controller
             'alert-type' =>'success'
         );
 
-        return redirect()->route('tag.index')->with($notification);
+        return redirect()->route('admin.tag.index')->with($notification);
 
 
     }
@@ -57,7 +57,7 @@ class TagsController extends Controller
             'alert-type' =>'success'
         );
 
-        return redirect()->route('tag.index')->with($notification);
+        return redirect()->route('admin.tag.index')->with($notification);
 
     }
 
@@ -70,7 +70,7 @@ class TagsController extends Controller
             'alert-type' =>'success'
         );
 
-        return redirect()->route('tag.index')->with($notification);
+        return redirect()->route('admin.tag.index')->with($notification);
 
     }
 }

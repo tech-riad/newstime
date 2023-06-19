@@ -63,7 +63,7 @@ class NewsController extends Controller
         'alert-type' => 'success'
     ];
 
-    return redirect()->route('news.index')->with($notification);
+    return redirect()->route('admin.news.index')->with($notification);
 }
 
     public function edit($id)
@@ -117,7 +117,7 @@ class NewsController extends Controller
             'alert-type' => 'success',
         ];
 
-        return redirect()->route('news.index')->with($notification);
+        return redirect()->route('admin.news.index')->with($notification);
     }
 
     public function destroy($id)
@@ -136,7 +136,7 @@ class NewsController extends Controller
         'alert-type' => 'success',
     ];
 
-    return redirect()->route('news.index')->with($notification);
+    return redirect()->route('admin.news.index')->with($notification);
 
     }
 

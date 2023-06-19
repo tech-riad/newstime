@@ -155,7 +155,7 @@
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a href="{{route('admin.generalsetting.edit')}}" class="nav-link">
+                    <a href="{{url('/admin/generalsetting')}}" class="nav-link">
                         <i class="nav-icon fas fa-cog"></i>
                         <p>
                             Setting
