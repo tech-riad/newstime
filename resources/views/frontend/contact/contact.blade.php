@@ -20,7 +20,7 @@
         <div class="row align-items-center">
             <div class="col-md-4">
                 <div class="form">
-                    <form action="{{route('message')}}" method="post">
+                    <form action="{{route('admin.message')}}" method="post">
                         @csrf
                         <div class="form-row">
                             <div class="form-group col-md-6">

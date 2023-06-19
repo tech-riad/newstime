@@ -41,6 +41,7 @@ class WebsiteController extends Controller
     // General Seeting
     $setting = GeneralSetting::first();
 
+
     return view('frontend.index', compact('news', 'featured','sportsnews','technologynews'
                                            ,'businessnews','entertainmentnews','latestTopNews',
                                            'latestTopsix','categories','tags','popularnews','toppopular','menuItems','setting'));
@@ -52,11 +53,21 @@ class WebsiteController extends Controller
         $view        = News::find($id);
         $view->increment('post_view');
 
+        $setting = GeneralSetting::first();
         $categories  = Category::all();
         $tags        = Tags::all();
 
-        return view('frontend.postshow',compact('menuItems', 'view','categories','tags'));
+        return view('frontend.postshow',compact('menuItems', 'view','categories','tags','setting'));
 
 
+    }
+
+
+
+    public function categoryshow($category_id)
+    {
+        $catnews = News::find($category_id);
+
+        return view();
     }
 }

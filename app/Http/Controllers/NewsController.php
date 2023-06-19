@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\GeneralSetting;
 use App\Models\News;
 use App\Models\Subcategory;
 use Illuminate\Http\Request;
@@ -15,8 +16,9 @@ class NewsController extends Controller
     public function index()
     {
         $news = News::orderBy('id', 'desc')->get();
+        $setting = GeneralSetting::first();
 
-        return view('backend.news.news',compact('news'));
+        return view('backend.news.news',compact('news','setting'));
 
     }
 
