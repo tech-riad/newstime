@@ -76,6 +76,19 @@
                 <div class="row">
                     <div class="col-lg-8">
                         <div class="mb-3">
+                            <label for="location" class="form-label">Location</label>
+                            <input id="location" name="location" type="text " class="form-control" value="{{@$setting->location ?? @old('location')}}"
+                                class="@error('location') is-invalid @enderror">
+
+                            @error('location')
+                            <div class="text-danger">{{ $message }}</div>
+                            @enderror
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="mb-3">
                             <label for="facebook" class="form-label">Facebook</label>
                             <input id="facebook" name="facebook" type="text " class="form-control" value="{{@$setting->facebook ?? @old('facebook')}}"
                                 class="@error('facebook') is-invalid @enderror">

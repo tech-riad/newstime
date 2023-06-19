@@ -16,15 +16,16 @@ class GeneralSettingSeeder extends Seeder
     public function run()
     {
         GeneralSetting::updateOrCreate([
-            'name' => 'Newstime24',
-            'email' => 'Newstime24',
-            'phone' => 'Newstime24',
-            'facebook' => 'Newstime24',
-            'twitter' => 'Newstime24',
-            'instagram' => 'Newstime24',
-            'linkdein' => 'Newstime24',
-            'youtube' => 'Newstime24',
-            'notice' => 'Newstime24',
+            'name'      => 'Newstime24',
+            'email'     => 'email@email.com',
+            'phone'     => '01758964235',
+            'location'  => '123 Terry Lane, New York, USA',
+            'facebook'  => 'https://facebook.com/',
+            'twitter'   => 'https://twitter.com/',
+            'instagram' => 'https://instagram.com/',
+            'linkdein'  => 'https://bd.linkedin.com/',
+            'youtube'   => 'https://youtube.com/',
+            'notice'    => 'Test Notice',
 
 
         ]);

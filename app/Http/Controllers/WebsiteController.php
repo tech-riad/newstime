@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\GeneralSetting;
 use App\Models\MenuItem;
 use App\Models\News;
 use App\Models\Tags;
@@ -37,9 +38,12 @@ class WebsiteController extends Controller
     // Menu
     $menuItems         = MenuItem::orderBy('order')->get();
 
+    // General Seeting
+    $setting = GeneralSetting::first();
+
     return view('frontend.index', compact('news', 'featured','sportsnews','technologynews'
                                            ,'businessnews','entertainmentnews','latestTopNews',
-                                           'latestTopsix','categories','tags','popularnews','toppopular','menuItems'));
+                                           'latestTopsix','categories','tags','popularnews','toppopular','menuItems','setting'));
 }
 
     public function show($id)

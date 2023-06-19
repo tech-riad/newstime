@@ -1,5 +1,6 @@
 @extends('backend.layouts.app')
 @section('content')
+
 <div  class="content-wrapper">
     <div class="card new-table">
         <div class="card-header">
@@ -33,7 +34,7 @@
                                     <select name="category_id" class="form-control" >
                                         <option value="">select</option>
                                         @foreach($categories as $cat)
-                                        <option value="{{ $cat->id }}" {{ $cat->id == $news->category_id ? 'selected' : '' }}>
+                                        <option value="{{ $cat->id }}" {{ $cat->id == $cat->category_id ? 'selected' : '' }}>
                                             {{ $cat->category_name }}
                                         </option>
                                         @endforeach
@@ -46,7 +47,7 @@
                                     <select name="subcategory_id" class="form-control" >
                                         <option value="">select</option>
                                         @foreach($subcategories as $cat)
-                                        <option value="{{ $cat->id }}" {{ $cat->id == $news->subcategory_id ? 'selected' : '' }}>
+                                        <option value="{{ $cat->id }}" {{ $cat->id == $cat->subcategory_id ? 'selected' : '' }}>
                                             {{ $cat->name }}
                                         </option>
                                         @endforeach
@@ -81,7 +82,7 @@
                                 <div class="mb-3">
                                     <label for="editor" class="form-label">Desctiption</label>
                                     <textarea class="form-control" id="editor" name="description"
-                                        rows="3">{{@$news->description ?? old('description')}}</textarea>
+                                        rows="3" style="background-color: #000">{{@$news->description ?? old('description')}}</textarea>
                                     @if($errors->has('description'))
                                     <div class="error">{{ $errors->first('description') }}</div>
                                     @endif
@@ -119,9 +120,16 @@
 @push('js')
 <script>
 
-     $("#image").hide();
+
     $("#customFile").change(function () {
         $("#image").show();
     });
+
+    ClassicEditor
+        .create(document.querySelector('#editor'))
+        .catch(error => {
+            console.error(error);
+        });
+
 </script>
 @endpush

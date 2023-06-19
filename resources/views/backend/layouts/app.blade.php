@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="{{asset('backend/plugins/fullcalendar/main.css')}}">
     <link rel="stylesheet" href="{{asset('backend/plugins/ekko-lightbox/ekko-lightbox.css')}}">
 
+    
 
     @stack('css')
 </head>
@@ -76,6 +77,7 @@
         <script src="{{asset('backend/dist/js/demo.js')}}"></script>
         <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
         <script src="{{asset('backend/dist/js/pages/admin/dashboard2.js')}}"></script>
+        <script src="https://cdn.ckeditor.com/ckeditor5/35.3.2/classic/ckeditor.js"></script>
 
 
 

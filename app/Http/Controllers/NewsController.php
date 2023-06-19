@@ -24,6 +24,7 @@ class NewsController extends Controller
     {
         $categories    = Category::all();
         $subcategories = Subcategory::all();
+        $news          = News::all();
 
         return view('backend.news.create', compact('categories', 'subcategories'));
     }
@@ -70,7 +71,9 @@ class NewsController extends Controller
     {
         $categories    = Category::all();
         $subcategories = Subcategory::all();
-        $news = News::find($id);
+        $news          = News::find($id);
+
+
 
         return view('backend.news.create', compact('categories', 'subcategories', 'news'));
     }

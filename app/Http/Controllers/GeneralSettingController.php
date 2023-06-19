@@ -97,6 +97,7 @@ class GeneralSettingController extends Controller
         $setting->twitter    = $request->twitter;
         $setting->linkdein   = $request->linkdein;
         $setting->youtube    = $request->youtube;
+        $setting->location   = $request->location;
 
         $setting->save();
 

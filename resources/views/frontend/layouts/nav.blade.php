@@ -17,11 +17,11 @@
                 </div>
                 <div class="col-lg-3 col-md-4">
                     <div class="social">
-                        <a href=""><i class="fab fa-twitter"></i></a>
-                        <a href=""><i class="fab fa-facebook"></i></a>
-                        <a href=""><i class="fab fa-linkedin"></i></a>
-                        <a href=""><i class="fab fa-instagram"></i></a>
-                        <a href=""><i class="fab fa-youtube"></i></a>
+                        <a href="{{$setting->twitter}}"><i class="fab fa-twitter"></i></a>
+                            <a href="{{$setting->facebook}}"><i class="fab fa-facebook"></i></a>
+                            <a href="{{$setting->linkdein}}"><i class="fab fa-linkedin"></i></a>
+                            <a href="{{$setting->instagram}}"><i class="fab fa-instagram"></i></a>
+                            <a href="{{$setting->youtube}}"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
             </div>

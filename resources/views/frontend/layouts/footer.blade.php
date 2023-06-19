@@ -31,15 +31,15 @@
                 <div class="footer-widget">
                     <h3 class="title">Get in Touch</h3>
                     <div class="contact-info">
-                        <p><i class="fa fa-map-marker"></i>123 Terry Lane, New York, USA</p>
-                        <p><i class="fa fa-envelope"></i>email@example.com</p>
-                        <p><i class="fa fa-phone"></i>+123-456-7890</p>
+                        <p><i class="fa fa-map-marker"></i>{{$setting->location}}</p>
+                        <p><i class="fa fa-envelope"></i>{{$setting->email}}</p>
+                        <p><i class="fa fa-phone"></i>{{$setting->phone}}</p>
                         <div class="social">
-                            <a href=""><i class="fab fa-twitter"></i></a>
-                            <a href=""><i class="fab fa-facebook"></i></a>
-                            <a href=""><i class="fab fa-linkedin"></i></a>
-                            <a href=""><i class="fab fa-instagram"></i></a>
-                            <a href=""><i class="fab fa-youtube"></i></a>
+                            <a href="{{$setting->twitter}}"><i class="fab fa-twitter"></i></a>
+                            <a href="{{$setting->facebook}}"><i class="fab fa-facebook"></i></a>
+                            <a href="{{$setting->linkdein}}"><i class="fab fa-linkedin"></i></a>
+                            <a href="{{$setting->instagram}}"><i class="fab fa-instagram"></i></a>
+                            <a href="{{$setting->youtube}}"><i class="fab fa-youtube"></i></a>
                         </div>
                     </div>
                 </div>
