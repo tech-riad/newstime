@@ -1,5 +1,4 @@
-@extends('backend.layouts.app')
-@section('content')
+
 @extends('backend.layouts.app')
 @section('content')
 
@@ -166,4 +165,4 @@
 @endpush
 
 
-@endsection
+

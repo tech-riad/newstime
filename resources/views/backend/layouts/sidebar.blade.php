@@ -62,7 +62,7 @@
                 <li class="nav-item">
                     <a href="{{url('/admin/menu')}}" class="nav-link">
                         <i class="far fa-circle nav-icon"></i>
-                        <p>DataTables</p>
+                        <p>Menu Table</p>
                     </a>
                 </li>
                 <li class="nav-header">EXAMPLES</li>
