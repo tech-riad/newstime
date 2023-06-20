@@ -1,14 +1,10 @@
 @extends('frontend.layouts.app')
 
 @section('content')
-
-
-
         <!-- Top News Start-->
         <div class="top-news">
             <div class="container-fluid">
                 <div class="row">
-
                     <div class="col-md-6 tn-left">
                         <div class="tn-img">
                             <img src="{{asset('frontend/img/top-news-1.jpg')}}" />
@@ -36,8 +32,6 @@
                                 </div>
                             </div>
                             @endforeach
-
-
                         </div>
                     </div>
                 </div>

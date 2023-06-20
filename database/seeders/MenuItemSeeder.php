@@ -19,37 +19,37 @@ class MenuItemSeeder extends Seeder
         $menuItems = [
             [
                 'title' => 'Home',
-                'url' => '/',
+                'url'   => '/',
                 'order' => 1,
             ],
             [
                 'title' => 'Sports',
-                'url' => '/sports',
+                'url'   => '/news/sports',
                 'order' => 2,
             ],
             [
                 'title' => 'Technology',
-                'url' => '/technology',
+                'url'   => '/news/technology',
                 'order' => 3,
             ],
             [
                 'title' => 'Business',
-                'url' => '/business',
+                'url'   => '/news/business',
                 'order' => 4,
             ],
             [
                 'title' => 'Entertainment',
-                'url' => '/entertainment',
+                'url'   => '/news/entertainment',
                 'order' => 5,
             ],
             [
                 'title' => 'Fashion',
-                'url' => '/fashion',
+                'url'   => '/news/fashion',
                 'order' => 6,
             ],
             [
                 'title' => 'Contact Us',
-                'url' => '/contact',
+                'url'   => '/contact',
                 'order' => 7,
             ],
         ];

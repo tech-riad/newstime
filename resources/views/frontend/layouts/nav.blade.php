@@ -42,7 +42,7 @@
                 <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                     <div class="navbar-nav m-auto">
                         @foreach($menuItems as $menuItem)
-                            <a href="{{ $menuItem->url}}" class="nav-item nav-link{{ Request::url() == $menuItem->url ? ' active' : '' }}">{{ $menuItem->title }}</a>
+                            <a href="{{url($menuItem->url)}}" class="nav-item nav-link">{{ $menuItem->title }}</a>
                         @endforeach
                     </div>
                 </div>
