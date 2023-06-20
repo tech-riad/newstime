@@ -105,7 +105,7 @@ Route::group(['as'=>'admin.','prefix'=>'admin'],function(){
             Route::post('/store', [MenuController::class, 'store'])->name('store');
             Route::get('/edit/{id}', [MenuController::class, 'edit'])->name('edit');
             Route::put('/update/{id}', [MenuController::class, 'update'])->name('update');
-            Route::delete('/destroy/{id}', [MenuController::class, 'destroy'])->name('destroy');
+            Route::any('/destroy/{id}', [MenuController::class, 'destroy'])->name('destroy');
 
         });
 

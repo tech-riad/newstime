@@ -16,7 +16,9 @@ return new class extends Migration
         Schema::create('menu_items', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->string('url');
+            $table->string('url')->nullable();
+            $table->string('type')->default('url');
+            $table->unsignedBigInteger('category_id')->nullable();
             $table->integer('order')->nullable();
             $table->timestamps();
         });

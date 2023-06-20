@@ -39,7 +39,7 @@ class WebsiteController extends Controller
     $menuItems         = MenuItem::orderBy('order')->get();
 
     // General Seeting
-    $setting           = GeneralSetting::first();
+    $setting = GeneralSetting::first();
 
 
     return view('frontend.index', compact('news', 'featured','sportsnews','technologynews'
@@ -53,7 +53,7 @@ class WebsiteController extends Controller
         $view        = News::find($id);
         $view->increment('post_view');
 
-        $setting     = GeneralSetting::first();
+        $setting = GeneralSetting::first();
         $categories  = Category::all();
         $tags        = Tags::all();
 
@@ -63,16 +63,13 @@ class WebsiteController extends Controller
     }
 
 
+
     public function showByCategory($category)
     {
-        $setting     = GeneralSetting::first();
-        $categories  = Category::all();
-        $tags        = Tags::all();
         $menuItems   = MenuItem::orderBy('order')->get();
-        $category    = Category::where('category_name', $category)->firstOrFail();
-        $news        = News::where('category_id', $category->id)->get();
-        
-
-        return view('frontend.news.categorynews', compact('news','menuItems','categories','tags','setting'));
+        $category = Category::where('category_name', $category)->firstOrFail();
+        $news = News::where('category_id', $category->id)->get();
+        $setting = GeneralSetting::first();
+        return view('frontend.news.categorynews', compact('news','menuItems','setting'));
     }
 }

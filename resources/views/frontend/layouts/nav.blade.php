@@ -42,8 +42,17 @@
                 <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                     <div class="navbar-nav m-auto">
                         @foreach($menuItems as $menuItem)
-                            <a href="{{url($menuItem->url)}}" class="nav-item nav-link">{{ $menuItem->title }}</a>
-                        @endforeach
+                        @php
+                            if ($menuItem->type == 'category') {
+
+                                # code...
+                                 $cat           = App\Models\Category::find($menuItem->category_id);
+                                 $menuItem->url = route('news.category', $cat->slug);
+
+                            }
+                        @endphp
+                        <a href="{{ $menuItem->url }}" class="nav-item nav-link">{{ $menuItem->title }}</a>
+                    @endforeach
                     </div>
                 </div>
             </nav>

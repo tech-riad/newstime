@@ -23,35 +23,18 @@ class MenuItemSeeder extends Seeder
                 'order' => 1,
             ],
             [
-                'title' => 'Sports',
-                'url'   => '/news/sports',
-                'order' => 2,
+                'title'      => 'Technology',
+                'type'        => 'category',
+                'category_id' => 3,
+                'order'       => 2,
             ],
             [
-                'title' => 'Technology',
-                'url'   => '/news/technology',
-                'order' => 3,
+                'title'      => 'Contact',
+                'type'        => 'url',
+                'order'       => 3,
+                'url'       => '/contact',
             ],
-            [
-                'title' => 'Business',
-                'url'   => '/news/business',
-                'order' => 4,
-            ],
-            [
-                'title' => 'Entertainment',
-                'url'   => '/news/entertainment',
-                'order' => 5,
-            ],
-            [
-                'title' => 'Fashion',
-                'url'   => '/news/fashion',
-                'order' => 6,
-            ],
-            [
-                'title' => 'Contact Us',
-                'url'   => '/contact',
-                'order' => 7,
-            ],
+
         ];
 
         foreach ($menuItems as $menuItem) {
