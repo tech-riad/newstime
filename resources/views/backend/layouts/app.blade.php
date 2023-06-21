@@ -76,8 +76,8 @@
         <!-- AdminLTE for demo purposes -->
         <script src="{{asset('backend/dist/js/demo.js')}}"></script>
         <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-        <script src="{{asset('backend/dist/js/pages/admin/dashboard2.js')}}"></script>
-       
+        <script src="{{asset('backend/dist/js/pages/dashboard2.js')}}"></script>
+
 
 
 
