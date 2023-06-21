@@ -15,7 +15,7 @@ class WebsiteController extends Controller
 {
     $featured          = News::where('subcategory_id', 1)->latest('id')->first();
     $news              = News::where('subcategory_id', 2)->latest('id')->take(4)->get();
-    $sportsnews        = News::where('category_id', 2)->latest('id')->take(4)->get();
+    $sportsnews        = News::where('category_id', 6)->latest('id')->take(4)->get();
     $technologynews    = News::where('category_id', 3)->latest('id')->take(4)->get();
     $businessnews      = News::where('category_id', 3)->latest('id')->take(4)->get();
     $entertainmentnews = News::where('category_id', 3)->latest('id')->take(4)->get();

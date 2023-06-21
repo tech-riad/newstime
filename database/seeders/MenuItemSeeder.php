@@ -23,15 +23,33 @@ class MenuItemSeeder extends Seeder
                 'order' => 1,
             ],
             [
-                'title'      => 'Technology',
+                'title'      => 'জাতীয়',
+                'type'        => 'category',
+                'category_id' => 2,
+                'order'       => 2,
+            ],
+            [
+                'title'      => 'রাজনীতি',
                 'type'        => 'category',
                 'category_id' => 3,
-                'order'       => 2,
+                'order'       => 3,
+            ],
+            [
+                'title'       => 'অর্থনীতি',
+                'type'        => 'category',
+                'category_id' => 4,
+                'order'       => 4,
+            ],
+            [
+                'title'      => 'বিনোদন ',
+                'type'        => 'category',
+                'category_id' => 7,
+                'order'       => 5,
             ],
             [
                 'title'      => 'Contact',
                 'type'        => 'url',
-                'order'       => 3,
+                'order'       => 10,
                 'url'       => '/contact',
             ],
 

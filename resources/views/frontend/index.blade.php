@@ -7,11 +7,11 @@
                 <div class="row">
                     <div class="col-md-6 tn-left">
                         <div class="tn-img">
-                            <img src="{{asset('frontend/img/top-news-1.jpg')}}" />
+                            <img src="{{asset(@$featured->image)}}" />
                             <div class="tn-content">
                                 <div class="tn-content-inner">
-                                    <a class="tn-date" href="{{route('show',$featured->id)}}"><i class="far fa-clock"></i>{{@$featured->published_date}}</a>
-                                    <a class="tn-title" href="{{route('show',$featured->id)}}">{{@$featured->title}}</a>
+                                    <a class="tn-date" href="{{route('show',@$featured->id)}}"><i class="far fa-clock"></i>{{@$featured->created_at}}</a>
+                                    <a class="tn-title" href="{{route('show',@$featured->id)}}">{{@$featured->title}}</a>
                                 </div>
                             </div>
                         </div>
@@ -45,12 +45,12 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-6">
-                        <h2><i class="fas fa-align-justify"></i>Sports</h2>
+                        <h2><i class="fas fa-align-justify"></i>খেলাধুলা</h2>
                         <div class="row cn-slider">
                             @foreach ($sportsnews as $sports)
                             <div class="col-md-6">
                                 <div class="cn-img">
-                                    <img src="{{asset('frontend/img/cat-news-1.jpg')}}" />
+                                    <img src="{{asset(@$sports->image)}}"/>
                                     <div class="cn-content">
                                         <div class="cn-content-inner">
                                             <a class="cn-date" href="{{route('show',$sports->id)}}"><i class="far fa-clock"></i>{{@$sports->published_date}}</a>
@@ -65,7 +65,7 @@
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <h2><i class="fas fa-align-justify"></i>Technology</h2>
+                        <h2><i class="fas fa-align-justify"></i>জাতীয়</h2>
                         <div class="row cn-slider">
                             @foreach ($technologynews as $technology)
                             <div class="col-md-6">
@@ -94,7 +94,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-6">
-                        <h2><i class="fas fa-align-justify"></i>Business</h2>
+                        <h2><i class="fas fa-align-justify"></i>রাজনীতি</h2>
                         <div class="row cn-slider">
                             @foreach ($businessnews as $business)
                             <div class="col-md-6">
@@ -113,7 +113,7 @@
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <h2><i class="fas fa-align-justify"></i>Entertainment</h2>
+                        <h2><i class="fas fa-align-justify"></i>বিনোদন</h2>
                         <div class="row cn-slider">
                             @foreach ($entertainmentnews as $entertainment)
                             <div class="col-md-6">

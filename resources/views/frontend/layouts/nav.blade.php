@@ -4,8 +4,8 @@
             <div class="row align-items-center">
                 <div class="col-lg-3 col-md-4">
                     <div class="logo">
-                        <a href="">
-                            <img src="{{asset('frontend/img/logo.png')}}" alt="Logo">
+                        <a href="{{url('/')}}">
+                            <img src="{{asset(@$setting->image)}}" alt="Logo">
                         </a>
                     </div>
                 </div>

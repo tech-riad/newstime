@@ -26,6 +26,7 @@ class GeneralSettingSeeder extends Seeder
             'linkdein'  => 'https://bd.linkedin.com/',
             'youtube'   => 'https://youtube.com/',
             'notice'    => 'Test Notice',
+            'image'     => 'setting/images/20230621065355.png',
 
 
         ]);
