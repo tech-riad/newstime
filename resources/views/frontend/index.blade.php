@@ -11,7 +11,7 @@
                             <div class="tn-content">
                                 <div class="tn-content-inner">
                                     <a class="tn-date" href="{{route('show',@$featured->id)}}"><i class="far fa-clock"></i>{{@$featured->created_at}}</a>
-                                    <a class="tn-title" href="{{route('show',@$featured->id)}}">{{@$featured->title}}</a>
+                                    <a class="tn-title" href="{{route('show',@$featured->id)}}">{!! Str::limit(@$featured->title,60) !!}</a>
                                 </div>
                             </div>
                         </div>
@@ -22,11 +22,11 @@
                             @foreach($news as $n)
                             <div class="col-md-6">
                                 <div class="tn-img">
-                                    <img src="{{asset($n->image)}}" />
+                                    <img src="{{asset(@$n->image)}}" />
                                     <div class="tn-content">
                                         <div class="tn-content-inner">
                                             <a class="tn-date" href="{{route('show',$n->id)}}"><i class="far fa-clock"></i>{{@$n->created_at}}</a>
-                                            <a class="tn-title" href="{{route('show',$n->id)}}">{{@$n->title}}</a>
+                                            <a class="tn-title" href="{{route('show',$n->id)}}">{!! Str::limit(@$n->title,60) !!}</a>
                                         </div>
                                     </div>
                                 </div>
@@ -54,7 +54,7 @@
                                     <div class="cn-content">
                                         <div class="cn-content-inner">
                                             <a class="cn-date" href="{{route('show',$sports->id)}}"><i class="far fa-clock"></i>{{@$sports->created_at}}</a>
-                                            <a class="cn-title" href="{{route('show',$sports->id)}}">{{@$sports->title}}</a>
+                                            <a class="cn-title" href="{{route('show',$sports->id)}}">{!! Str::limit(@$sports->title,60) !!}</a>
                                         </div>
                                     </div>
                                 </div>
@@ -70,11 +70,11 @@
                             @foreach ($technologynews as $technology)
                             <div class="col-md-6">
                                 <div class="cn-img">
-                                    <img src="{{asset($technology->image)}}" />
+                                    <img src="{{asset(@$technology->image)}}" />
                                     <div class="cn-content">
                                         <div class="cn-content-inner">
                                             <a class="cn-date" href="{{route('show',$technology->id)}}"><i class="far fa-clock"></i>{{@$technology->created_at}}</a>
-                                            <a class="cn-title" href="{{route('show',$technology->id)}}">{{@$technology->title}}</a>
+                                            <a class="cn-title" href="{{route('show',$technology->id)}}">{!! Str::limit(@$technology->title,60) !!}</a>
                                         </div>
                                     </div>
                                 </div>
@@ -99,11 +99,11 @@
                             @foreach ($businessnews as $business)
                             <div class="col-md-6">
                                 <div class="cn-img">
-                                    <img src="{{asset($business->image)}}" />
+                                    <img src="{{asset(@$business->image)}}" />
                                     <div class="cn-content">
                                         <div class="cn-content-inner">
                                             <a class="cn-date" href="{{route('show',$business->id)}}"><i class="far fa-clock"></i>{{@$business->created_at}}</a>
-                                            <a class="cn-title" href="{{route('show',$business->id)}}">{{@$business->title}}</a>
+                                            <a class="cn-title" href="{{route('show',$business->id)}}">{!! Str::limit(@$business->title,60) !!}</a>
                                         </div>
                                     </div>
                                 </div>
@@ -118,11 +118,11 @@
                             @foreach ($entertainmentnews as $entertainment)
                             <div class="col-md-6">
                                 <div class="cn-img">
-                                    <img src="{{asset($entertainment->image)}}" />
+                                    <img src="{{asset(@$entertainment->image)}}" />
                                     <div class="cn-content">
                                         <div class="cn-content-inner">
                                             <a class="cn-date" href="{{route('show',$entertainment->id)}}"><i class="far fa-clock"></i>{{@$entertainment->created_at}}</a>
-                                            <a class="cn-title" href="{{route('show',$entertainment->id)}}">{{@$entertainment->title}}</a>
+                                            <a class="cn-title" href="{{route('show',$entertainment->id)}}">{!! Str::limit(@$entertainment->title,60) !!}</a>
                                         </div>
                                     </div>
                                 </div>
@@ -150,10 +150,11 @@
                                             <img src="{{asset($latestTopNews->image)}}" />
                                         </div>
                                         <div class="mn-content">
-                                            <a class="mn-title" href="{{route('show',$latestTopNews->id)}}">{{@$latestTopNews->title}}</a>
+                                            <a class="mn-title" href="{{route('show',$latestTopNews->id)}}">{!! Str::limit(@$latestTopNews->title,80) !!}</a>
                                             <a class="mn-date" href="{{route('show',$latestTopNews->id)}}"><i class="far fa-clock"></i>{{@$latestTopNews->created_at}}</a>
                                             <p>
-                                                {{@$latestTopNews->description}}
+                                                {!! Str::limit(@$latestTopNews->description,120) !!}
+
                                             </p>
                                         </div>
                                     </div>
@@ -164,8 +165,8 @@
                                                 <img src="{{asset($lt->image)}}" />
                                             </div>
                                             <div class="mn-content">
-                                                <a class="mn-title" href="{{route('show',$lt->id)}}">{{@$lt->title}}</a>
-                                                <a class="mn-date" href="{{route('show',$lt->id)}}"><i class="far fa-clock"></i>{{@$lt->published_date}}</a>
+                                                <a class="mn-title" href="{{route('show',$lt->id)}}">{!! Str::limit(@$lt->title,80) !!}</a>
+                                                <a class="mn-date" href="{{route('show',$lt->id)}}"><i class="far fa-clock"></i>{{@$lt->created_at}}</a>
                                             </div>
                                         </div>
                                         @endforeach
@@ -174,7 +175,7 @@
                                 </div>
                             </div>
                             <div class="col-md-12">
-                                <h2><i class="fas fa-align-justify"></i>Popular News</h2>
+                                <h2><i class="fas fa-align-justify"></i>জনপ্রিয় সংবাদ</h2>
                                 <div class="row">
                                     <div class="col-lg-6">
                                         <div class="mn-img">
@@ -184,7 +185,7 @@
                                             <a class="mn-title" href="{{route('show',$toppopular->id)}}">{{$toppopular->title}}</a>
                                             <a class="mn-date" href="{{route('show',$toppopular->id)}}"><i class="far fa-clock"></i>{{$toppopular->created_at}}</a>
                                             <p>
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed porta dui. Class aptent taciti sociosqu ad litora torquent per conubia nostra inceptos...
+                                                {!! Str::limit(@$latestTopNews->description,120) !!}
                                             </p>
                                         </div>
                                     </div>

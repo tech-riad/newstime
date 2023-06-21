@@ -34,7 +34,9 @@
                                     <select name="category_id" class="form-control" >
                                         <option value="">select</option>
                                         @foreach($categories as $cat)
-                                        <option value="{{ $cat->id }}" {{ $cat->id == $cat->category_id ? 'selected' : '' }}>
+                                        <option value="{{ $cat->id }}" @if ($cat->id == @$news->category_id) selected
+
+                                            @endif>
                                             {{ $cat->category_name }}
                                         </option>
                                         @endforeach
@@ -47,7 +49,9 @@
                                     <select name="subcategory_id" class="form-control" >
                                         <option value="">select</option>
                                         @foreach($subcategories as $cat)
-                                        <option value="{{ $cat->id }}" {{ $cat->id == $cat->subcategory_id ? 'selected' : '' }}>
+                                        <option value="{{ $cat->id }}" @if ($cat->id == @$news->category_id) selected
+
+                                            @endif>
                                             {{ $cat->name }}
                                         </option>
                                         @endforeach
@@ -129,4 +133,22 @@
 
 
 </script>
+
+<script src="https://cdn.ckeditor.com/ckeditor5/35.3.2/classic/ckeditor.js"></script>
+
+<script>
+     ClassicEditor
+        .create(document.querySelector('#editor')).config({
+            uiColor: '#9AB8F3'
+        })
+        .catch(error => {
+            console.error(error);
+
+        });
+    // ClassicEditor.replace( '#editor', {
+    //         language: 'fr',
+    //         uiColor: '#9AB8F3'
+    //     });
+</script>
+
 @endpush

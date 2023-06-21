@@ -18,7 +18,7 @@ class MenuItemSeeder extends Seeder
     {
         $menuItems = [
             [
-                'title' => 'Home',
+                'title' => 'হোম',
                 'url'   => '/',
                 'order' => 1,
             ],
@@ -47,7 +47,7 @@ class MenuItemSeeder extends Seeder
                 'order'       => 5,
             ],
             [
-                'title'      => 'Contact',
+                'title'      => 'যোগাযোগ',
                 'type'        => 'url',
                 'order'       => 10,
                 'url'       => '/contact',

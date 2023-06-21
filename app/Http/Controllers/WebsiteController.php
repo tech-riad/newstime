@@ -40,6 +40,7 @@ class WebsiteController extends Controller
 
     // General Seeting
     $setting = GeneralSetting::first();
+    
 
 
     return view('frontend.index', compact('news', 'featured','sportsnews','technologynews'

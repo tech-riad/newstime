@@ -67,12 +67,12 @@
                                         <td>{{@$c->category->category_name}}</td>
                                         <td>{{@$c->subcategory->name}}</td>
                                         <td>{{@$c->post_view}}</td>
-                                        <td>{{@$c->published_date}}</td>
-                                        <td>{{@$c->description}}</td>
+                                        <td>{{@$c->created_at}}</td>
+                                        <td>{!! Str::limit(@$c->description,110) !!}</td>
                                         <td>{{@$c->status}}</td>
                                         <td>
-                                            <a href="{{route('admin.news.edit',$c->id)}}" class="btn btn-success">Edit</a>
-                                            <a href="{{route('admin.news.destroy',$c->id)}}" class="btn btn-danger deleteBtn">Delete</a>
+                                            <a href="{{route('admin.news.edit',$c->id)}}" class="btn btn-success"><i class="fas fa-edit"></i></a>
+                                            <a href="{{route('admin.news.destroy',$c->id)}}" class="btn btn-danger deleteBtn mt-2" style="font-size: 18px;"><i class="fas fa-trash"></i></a>
                                         </td>
                                     </tr>
                                     @endforeach

@@ -54,19 +54,13 @@
 
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <i class="far fa-circle nav-icon"></i>
-                        <p>DataTables</p>
-                    </a>
-                </li>
-                <li class="nav-item">
                     <a href="{{url('/admin/menu')}}" class="nav-link">
-                        <i class="far fa-circle nav-icon"></i>
+                        <i class="far fa fa-table nav-icon"></i>
                         <p>Menu Table</p>
                     </a>
                 </li>
-                <li class="nav-header">EXAMPLES</li>
-                <li class="nav-item">
+                <li class="nav-header">Main</li>
+                {{-- <li class="nav-item">
                     <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-calendar-alt"></i>
                         <p>
@@ -82,7 +76,7 @@
                             Gallery
                         </p>
                     </a>
-                </li>
+                </li> --}}
                 <li class="nav-item">
                     <a href="{{url('/admin/message')}}" class="nav-link">
                         <i class="nav-icon far fa-envelope-open"></i>
@@ -105,45 +99,27 @@
 
                         <li class="nav-item">
                             <a href="{{url('/admin/category')}}" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
+                                <i class="fas fa-list nav-icon"></i>
                                 <p>Category</p>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="{{url('/admin/subcategory')}}" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
+                                <i class="fas fa-list nav-icon"></i>
                                 <p>Sub Category</p>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="{{url('/admin/tag')}}" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
+                                <i class="fas fa-list nav-icon"></i>
                                 <p>Tag</p>
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a href="{{url('/admin/news')}}" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>news</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{{url('/admin/contact')}}" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Contacts</p>
-                            </a>
-                        </li>
 
-                        <li class="nav-item">
-                            <a href="{{url('/admin/contactus')}}" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Contact us</p>
-                            </a>
-                        </li>
                     </ul>
                 </li>
 
-                <li class="nav-item">
+                {{-- <li class="nav-item">
                     <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-search"></i>
                         <p>
@@ -159,6 +135,12 @@
                             </a>
                         </li>
                     </ul>
+                </li> --}}
+                <li class="nav-item">
+                    <a href="{{url('/admin/news')}}" class="nav-link">
+                        <i class=" fas fa-newspaper nav-icon"></i>
+                        <p>news</p>
+                    </a>
                 </li>
                 <li class="nav-item">
                     <a href="{{url('/admin/generalsetting')}}" class="nav-link">
