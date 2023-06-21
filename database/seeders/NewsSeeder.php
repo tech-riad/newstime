@@ -25,7 +25,7 @@ class NewsSeeder extends Seeder
             ',
             'status'            => 1,
         ]);
-        
+
 
 
         // Sports News
@@ -63,76 +63,70 @@ class NewsSeeder extends Seeder
 
         // Technology News
         News::updateOrCreate([
+            'category_id'       => 2,
+            'subcategory_id'    => 2,
+            'image'             => 'public/images/20230621084839.jpg',
+            'published_date'    => '2023/06/15',
+            'title'             => 'পাঁচ বিসিএসের সর্বনিম্ন উত্তীর্ণ - ৪৫তম বিসিএস',
+            'description'       => '৪৫তম বিসিএসের প্রিলিমিনারি পরীক্ষার ফল প্রকাশ করেছে বাংলাদেশ সরকারি কর্ম কমিশন (পিএসসি)। এতে উত্তীর্ণ হয়েছেন ১২ হাজার ৭৮৯ জন।
+
+            ',
+            'status'            => 1,
+        ]);
+        News::updateOrCreate([
+            'category_id'       => 2,
+            'subcategory_id'    => 2,
+            'image'             => 'public/images/20230621085518.jpg',
+            'published_date'    => '2023/06/15',
+            'title'             => 'ভারতে ট্রেন দুর্ঘটনায় নিহত ২৮৮, আহত ৮০০',
+            'description'       => 'ভারতের ওডিশা রাজ্যে ভয়াবহ ট্রেন দুর্ঘটনায় নিহত বেড়ে ২৮৮ জনে দাঁড়িয়েছে। আহত হয়েছেন ৮০০ জনের বেশি। ট্রেনের ভেতরে এখনো অনেকে আটকা পড়ে আছেন। নিহতের সংখ্যা আরও বাড়তে পারে বলে আশঙ্কা করা হচ্ছে।
+            ',
+            'status'            => 1,
+        ]);
+
+// Political News
+        News::updateOrCreate([
             'category_id'       => 3,
             'subcategory_id'    => 2,
-            'image'             => 'image_1670493095.jpg',
+            'image'             => 'public/images/20230621094216.jpg',
             'published_date'    => '2023/06/15',
-            'title'             => '6th post',
-            'description'       => 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit accusantium ratione distinctio!',
+            'title'             => 'দুদকের মামলায় বিএনপি নেতা আমানউল্লাহ-এর ১৩ বছর টুকুর ৯ বছরের কারাদণ্ড বহাল।',
+            'description'       => 'দুর্নীতি মামলায় বিএনপির স্থায়ী কমিটির সদস্য আমানউল্লাহ-এর ১৩ বছর ইকবাল হাসান মাহমুদ টুকুর ৯ বছরের কারাদণ্ড বহাল রেখেছেন হাইকোর্ট।
+            নিম্ন আদালতের রায়ের বিরুদ্ধে আপিল শুনানি শেষে আজ মঙ্গলবার (৩০ মে) বিচারপতি মো. নজরুল ইসলাম তালুকদার ও বিচারপতি খিজির হায়াতের হাইকোর্ট বেঞ্চ পৃথক মামলায় এ রায় ঘোষণা করেন। একইসঙ্গে বিচারিক আদালতে তাদের আত্মসমর্পণ করতে বলা হয়েছে।
+             ৪ কোটি ৯৬ লাখ ১১ হাজার ৯১৬ টাকার সম্পত্তির হিসাব ও আয়ের উৎস গোপন করার অভিযোগে দুদকের উপ-পরিচালক শাহরিয়ার চৌধুরী ২০০৭ সালের মার্চে সাবেক বিদ্যুৎ প্রতিমন্ত্রী টুকুর বিরুদ্ধে মোহাম্মদপুর থানায় এই মামলা দায়ের করেন। কমিশনের উপ-পরিচালক এসএমএম আখতার হামিদ ভূঞা ওই বছর ২৮ জুন মহানগর হাকিম আদালতে এ মামলায় অভিযোগপত্র দেন।
+             হাইকোর্টের ওই রায়ের বিরুদ্ধে দুদক আপিল করলে ২০১৪ সালের ২১ জানুয়ারি খালাসের রায় বাতিল করে পুনঃশুনানির আদেশ দেন আপিল বিভাগ।
+            ',
             'status'            => 1,
         ]);
         News::updateOrCreate([
             'category_id'       => 3,
             'subcategory_id'    => 2,
-            'image'             => 'image_1670493095.jpg',
+            'image'             => 'public/images/20230621092632.jpg',
             'published_date'    => '2023/06/15',
-            'title'             => '7th post',
-            'description'       => 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit accusantium ratione distinctio!',
-            'status'            => 1,
-        ]);
-        News::updateOrCreate([
-            'category_id'       => 3,
-            'subcategory_id'    => 2,
-            'image'             => 'image_1670493095.jpg',
-            'published_date'    => '2023/06/15',
-            'title'             => '8th post',
-            'description'       => 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit accusantium ratione distinctio!',
-            'status'            => 1,
-        ]);
-        News::updateOrCreate([
-            'category_id'       => 3,
-            'subcategory_id'    => 2,
-            'image'             => 'image_1670493095.jpg',
-            'published_date'    => '2023/06/15',
-            'title'             => '9th post',
-            'description'       => 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit accusantium ratione distinctio!',
+            'title'             => 'খালেদা জিয়ার আবেদন শুনানির জন্য বেঞ্চ নির্ধারণ করল আদালত।',
+            'description'       => 'নাইকো দুর্নীতি মামলার অভিযোগ গঠন বাতিল চেয়ে খালেদা জিয়ার আবেদন শুনানির জন্য হাইকোর্ট বেঞ্চ নির্ধারণ করে দিয়েছেন আদালত।
+            ',
             'status'            => 1,
         ]);
 // Entertainment News
         News::updateOrCreate([
-            'category_id'       => 4,
+            'category_id'       => 7,
             'subcategory_id'    => 2,
-            'image'             => 'image_1670493095.jpg',
+            'image'             => 'public/images/20230621093810.jpg',
             'published_date'    => '2023/06/15',
-            'title'             => '6th post',
-            'description'       => 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit accusantium ratione distinctio!',
+            'title'             => 'শাকিব খান। চমকের পর চমক। যেন সব হিসাব বদলে দিচ্ছেন। এই তো ‘প্রিয়তমা’ চলচ্চিত্রে এক লুকেই যেন আটকে ছিলেন।',
+            'description'       => 'চমক সৃষ্টি করা বড় চুলের শাকিবকে মিলিয়েছিলেন। দুয়ে-দুয়ে চার মিলিয়ে যখন অপেক্ষা করছিল ভক্তদের একাংশ, তখনই দাবার চাল উল্টে দিয়ে অঙ্কটাকে বদলে দিলেন মঙ্গলবার। অন্তত ভক্তরা এমনটাই বলছেন।
+            ',
             'status'            => 1,
         ]);
         News::updateOrCreate([
-            'category_id'       => 4,
+            'category_id'       => 7,
             'subcategory_id'    => 2,
-            'image'             => 'image_1670493095.jpg',
-            'published_date'    => '2023/06/15',
-            'title'             => '7th post',
-            'description'       => 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit accusantium ratione distinctio!',
-            'status'            => 1,
-        ]);
-        News::updateOrCreate([
-            'category_id'       => 4,
-            'subcategory_id'    => 2,
-            'image'             => 'image_1670493095.jpg',
-            'published_date'    => '2023/06/15',
-            'title'             => '8th post',
-            'description'       => 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit accusantium ratione distinctio!',
-            'status'            => 1,
-        ]);
-        News::updateOrCreate([
-            'category_id'       => 4,
-            'subcategory_id'    => 2,
-            'image'             => 'image_1670493095.jpg',
-            'published_date'    => '2023/06/15',
-            'title'             => '9th post',
-            'description'       => 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit accusantium ratione distinctio!',
+            'image'             => 'public/images/20230621093810.jpg',
+            'published_date'    => '2023/06/14',
+            'title'             => 'শাকিব খান। চমকের পর চমক। যেন সব হিসাব বদলে দিচ্ছেন। এই তো ‘প্রিয়তমা’ চলচ্চিত্রে এক লুকেই যেন আটকে ছিলেন।',
+            'description'       => 'চমক সৃষ্টি করা বড় চুলের শাকিবকে মিলিয়েছিলেন। দুয়ে-দুয়ে চার মিলিয়ে যখন অপেক্ষা করছিল ভক্তদের একাংশ, তখনই দাবার চাল উল্টে দিয়ে অঙ্কটাকে বদলে দিলেন মঙ্গলবার। অন্তত ভক্তরা এমনটাই বলছেন।
+            ',
             'status'            => 1,
         ]);
 

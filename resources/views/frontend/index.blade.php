@@ -22,10 +22,10 @@
                             @foreach($news as $n)
                             <div class="col-md-6">
                                 <div class="tn-img">
-                                    <img src="{{asset('frontend/img/top-news-2.jpg')}}" />
+                                    <img src="{{asset($n->image)}}" />
                                     <div class="tn-content">
                                         <div class="tn-content-inner">
-                                            <a class="tn-date" href="{{route('show',$n->id)}}"><i class="far fa-clock"></i>{{@$n->published_date}}</a>
+                                            <a class="tn-date" href="{{route('show',$n->id)}}"><i class="far fa-clock"></i>{{@$n->created_at}}</a>
                                             <a class="tn-title" href="{{route('show',$n->id)}}">{{@$n->title}}</a>
                                         </div>
                                     </div>
@@ -53,7 +53,7 @@
                                     <img src="{{asset(@$sports->image)}}"/>
                                     <div class="cn-content">
                                         <div class="cn-content-inner">
-                                            <a class="cn-date" href="{{route('show',$sports->id)}}"><i class="far fa-clock"></i>{{@$sports->published_date}}</a>
+                                            <a class="cn-date" href="{{route('show',$sports->id)}}"><i class="far fa-clock"></i>{{@$sports->created_at}}</a>
                                             <a class="cn-title" href="{{route('show',$sports->id)}}">{{@$sports->title}}</a>
                                         </div>
                                     </div>
@@ -70,11 +70,11 @@
                             @foreach ($technologynews as $technology)
                             <div class="col-md-6">
                                 <div class="cn-img">
-                                    <img src="{{asset('frontend/img/cat-news-4.jpg')}}" />
+                                    <img src="{{asset($technology->image)}}" />
                                     <div class="cn-content">
                                         <div class="cn-content-inner">
-                                            <a class="cn-date" href="{{route('show',$technology->id)}}"><i class="far fa-clock"></i>{{@$technology->published_date}}</a>
-                                            <a class="cn-title" href="{{route('show',$technology->id)}}">{{@$technology->published_date}}</a>
+                                            <a class="cn-date" href="{{route('show',$technology->id)}}"><i class="far fa-clock"></i>{{@$technology->created_at}}</a>
+                                            <a class="cn-title" href="{{route('show',$technology->id)}}">{{@$technology->title}}</a>
                                         </div>
                                     </div>
                                 </div>
@@ -99,11 +99,11 @@
                             @foreach ($businessnews as $business)
                             <div class="col-md-6">
                                 <div class="cn-img">
-                                    <img src="{{asset('frontend/img/cat-news-8.jpg')}}" />
+                                    <img src="{{asset($business->image)}}" />
                                     <div class="cn-content">
                                         <div class="cn-content-inner">
-                                            <a class="cn-date" href="{{route('show',$business->id)}}"><i class="far fa-clock"></i>{{@$business->published_date}}</a>
-                                            <a class="cn-title" href="">{{route('show',$business->id)}}</a>
+                                            <a class="cn-date" href="{{route('show',$business->id)}}"><i class="far fa-clock"></i>{{@$business->created_at}}</a>
+                                            <a class="cn-title" href="{{route('show',$business->id)}}">{{@$business->title}}</a>
                                         </div>
                                     </div>
                                 </div>
@@ -118,11 +118,11 @@
                             @foreach ($entertainmentnews as $entertainment)
                             <div class="col-md-6">
                                 <div class="cn-img">
-                                    <img src="{{asset('frontend/img/cat-news-10.jpg')}}" />
+                                    <img src="{{asset($entertainment->image)}}" />
                                     <div class="cn-content">
                                         <div class="cn-content-inner">
-                                            <a class="cn-date" href="{{route('show',$entertainment->id)}}"><i class="far fa-clock"></i>{{@$entertainment->published_date}}</a>
-                                            <a class="cn-title" href="{{route('show',$entertainment->id)}}">{{@$entertainment->published_date}}</a>
+                                            <a class="cn-date" href="{{route('show',$entertainment->id)}}"><i class="far fa-clock"></i>{{@$entertainment->created_at}}</a>
+                                            <a class="cn-title" href="{{route('show',$entertainment->id)}}">{{@$entertainment->title}}</a>
                                         </div>
                                     </div>
                                 </div>
@@ -147,11 +147,11 @@
                                 <div class="row">
                                     <div class="col-lg-6">
                                         <div class="mn-img">
-                                            <img src="{{asset('frontend/img/latest-news.jpg')}}" />
+                                            <img src="{{asset($latestTopNews->image)}}" />
                                         </div>
                                         <div class="mn-content">
                                             <a class="mn-title" href="{{route('show',$latestTopNews->id)}}">{{@$latestTopNews->title}}</a>
-                                            <a class="mn-date" href="{{route('show',$latestTopNews->id)}}"><i class="far fa-clock"></i>{{@$latestTopNews->published_date}}</a>
+                                            <a class="mn-date" href="{{route('show',$latestTopNews->id)}}"><i class="far fa-clock"></i>{{@$latestTopNews->created_at}}</a>
                                             <p>
                                                 {{@$latestTopNews->description}}
                                             </p>
@@ -161,7 +161,7 @@
                                         @foreach ($latestTopsix as $lt)
                                         <div class="mn-list">
                                             <div class="mn-img">
-                                                <img src="{{asset('frontend/img/latest-news.jpg')}}" />
+                                                <img src="{{asset($lt->image)}}" />
                                             </div>
                                             <div class="mn-content">
                                                 <a class="mn-title" href="{{route('show',$lt->id)}}">{{@$lt->title}}</a>
@@ -178,11 +178,11 @@
                                 <div class="row">
                                     <div class="col-lg-6">
                                         <div class="mn-img">
-                                            <img src="{{asset('frontend/img/popular-news.jpg')}}" />
+                                            <img src="{{asset($toppopular->image)}}" />
                                         </div>
                                         <div class="mn-content">
                                             <a class="mn-title" href="{{route('show',$toppopular->id)}}">{{$toppopular->title}}</a>
-                                            <a class="mn-date" href="{{route('show',$toppopular->id)}}"><i class="far fa-clock"></i>{{$toppopular->published_date}}</a>
+                                            <a class="mn-date" href="{{route('show',$toppopular->id)}}"><i class="far fa-clock"></i>{{$toppopular->created_at}}</a>
                                             <p>
                                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed porta dui. Class aptent taciti sociosqu ad litora torquent per conubia nostra inceptos...
                                             </p>
@@ -192,11 +192,11 @@
                                         @foreach ($popularnews as $popular)
                                         <div class="mn-list">
                                             <div class="mn-img">
-                                                <img src="{{asset('frontend/img/popular-news.jpg')}}" />
+                                                <img src="{{asset($popular->image)}}" />
                                             </div>
                                             <div class="mn-content">
                                                 <a class="mn-title" href="">{{@$popular->title}}</a>
-                                                <a class="mn-date" href=""><i class="far fa-clock"></i>{{@$popular->published_date}}</a>
+                                                <a class="mn-date" href=""><i class="far fa-clock"></i>{{@$popular->created_at}}</a>
                                             </div>
                                         </div>
 
@@ -211,13 +211,12 @@
                     <div class="col-md-4">
                         <div class="sidebar">
                             <div class="sidebar-widget">
-                                <h2><i class="fas fa-align-justify"></i>Category</h2>
+                                <h2><i class="fas fa-align-justify"></i>ক্যাটেগরি</h2>
                                 <div class="category">
                                     <ul class="fa-ul">
                                         @foreach ($categories as $category)
-                                        <li><span class="fa-li"><i class="far fa-arrow-alt-circle-right"></i></span><a href="">{{$category->title}}</a></li>
+                                        <li><span class="fa-li"><i class="far fa-arrow-alt-circle-right"></i></span><a href="">{{$category->category_name}}</a></li>
                                         @endforeach
-
                                     </ul>
                                 </div>
                             </div>
@@ -235,7 +234,7 @@
                             <div class="sidebar-widget">
                                 <h2><i class="fas fa-align-justify"></i>Ads 1 column</h2>
                                 <div class="image">
-                                    <a href=""><img src="img/adds-1.jpg" alt="Image"></a>
+                                    <a href=""><img src="{{asset('frontend/img/adds-1.jpg')}}" alt="Image"></a>
                                 </div>
                             </div>
 
@@ -244,10 +243,10 @@
                                 <div class="image">
                                     <div class="row">
                                         <div class="col-sm-6">
-                                            <a href=""><img src="img/adds-2.jpg" alt="Image"></a>
+                                            <a href=""><img src="{{asset('frontend/img/adds-2.jpg')}}" alt="Image"></a>
                                         </div>
                                         <div class="col-sm-6">
-                                            <a href=""><img src="img/adds-2.jpg" alt="Image"></a>
+                                            <a href=""><img src="{{asset('frontend/img/adds-2.jpg')}}" alt="Image"></a>
                                         </div>
                                     </div>
                                 </div>

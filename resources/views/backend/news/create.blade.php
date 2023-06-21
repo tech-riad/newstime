@@ -119,13 +119,14 @@
 @endsection
 @push('js')
 <script>
+    $("#image").hide();
 
 
     $("#customFile").change(function () {
         $("#image").show();
     });
 
-    
+
 
 </script>
 @endpush
