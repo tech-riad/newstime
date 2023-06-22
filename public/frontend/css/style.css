@@ -3,7 +3,7 @@
 /**********************************/
 body {
     color: #353535;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Tiro Bangla', sans-serif;
     font-weight: 400;
     background: #ffffff;
 }
@@ -368,8 +368,10 @@ button.btn:hover {
 }
 
 .top-news .tn-img:hover img {
-    filter: blur(5px);
-    -webkit-filter: blur(5px);
+    /* filter: blur(5px);
+    -webkit-filter: blur(5px); */
+    transform: scale(105%);
+    transition:  0.4s ease;
 }
 
 .top-news .tn-content {
@@ -382,6 +384,7 @@ button.btn:hover {
     background-image: linear-gradient(rgba(0, 0, 0, .0), rgba(0, 0, 0, .3), rgba(0, 0, 0, .9));
     display: flex;
     align-items: flex-end;
+    
 }
 
 .top-news .tn-content a.tn-date {

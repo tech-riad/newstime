@@ -20,7 +20,7 @@ class GeneralSettingSeeder extends Seeder
             'email'     => 'email@email.com',
             'phone'     => '01758964235',
             'location'  => '123 Terry Lane, New York, USA',
-            'facebook'  => 'https://facebook.com/',
+            'facebook'  => 'https://www.facebook.com/newstime24bdnet',
             'twitter'   => 'https://twitter.com/',
             'instagram' => 'https://instagram.com/',
             'linkdein'  => 'https://bd.linkedin.com/',

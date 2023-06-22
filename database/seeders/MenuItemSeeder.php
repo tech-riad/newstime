@@ -23,13 +23,13 @@ class MenuItemSeeder extends Seeder
                 'order' => 1,
             ],
             [
-                'title'      => 'জাতীয়',
+                'title'       => 'জাতীয়',
                 'type'        => 'category',
                 'category_id' => 2,
                 'order'       => 2,
             ],
             [
-                'title'      => 'রাজনীতি',
+                'title'       => 'রাজনীতি',
                 'type'        => 'category',
                 'category_id' => 3,
                 'order'       => 3,
@@ -41,16 +41,16 @@ class MenuItemSeeder extends Seeder
                 'order'       => 4,
             ],
             [
-                'title'      => 'বিনোদন ',
+                'title'       => 'বিনোদন ',
                 'type'        => 'category',
                 'category_id' => 7,
                 'order'       => 5,
             ],
             [
-                'title'      => 'যোগাযোগ',
+                'title'       => 'যোগাযোগ',
                 'type'        => 'url',
                 'order'       => 10,
-                'url'       => '/contact',
+                'url'         => '/contact',
             ],
 
         ];
