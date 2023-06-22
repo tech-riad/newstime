@@ -58,4 +58,43 @@
             </nav>
         </div>
     </div>
+
+
     <!-- Header End -->
+
+   {{-- <div class="merque">
+    <div class="container-fluid">
+        <div class="h2"><span>Notice</span></div>
+        <marquee  direction="left" >
+            This is a sample scrolling text that has scrolls texts to left.
+            </marquee>
+    </div>
+   </div> --}}
+
+<section >
+    <div class="container-fluid mt-2">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="newstiker">
+                    <div class="newstiker-title">শিরোনাম</div>
+                    <div class="newstiker-content">
+
+
+
+                        <marquee direction="left" behavior="scroll" onmouseover="this.stop();" onmouseout="this.start();">
+
+                            @foreach ($marquenews as $item)
+                                <a href="{{route('show',$item->id)}}">
+                                {{$item->title}}
+                                </a>
+                            @endforeach
+
+                        </marquee>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>

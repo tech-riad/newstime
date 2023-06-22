@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Message;
+use App\Models\News;
 use Illuminate\Http\Request;
 
 class MessageController extends Controller
@@ -15,8 +16,9 @@ class MessageController extends Controller
     public function index()
     {
         $messages = Message::orderBy('created_at', 'desc')->get();
+        $marquenews = News::latest('id')->take(4)->get();
 
-        return view('backend.message.message',compact('messages'));
+        return view('backend.message.message',compact('messages', 'marquenews'));
     }
 
     /**

@@ -41,11 +41,15 @@ class WebsiteController extends Controller
     // General Seeting
     $setting = GeneralSetting::first();
 
+    $marquenews = News::latest('id')->take(4)->get();
+
+
 
 
     return view('frontend.index', compact('news', 'featured','sportsnews','technologynews'
                                            ,'businessnews','entertainmentnews','latestTopNews',
-                                           'latestTopsix','categories','tags','popularnews','toppopular','menuItems','setting'));
+                                           'latestTopsix','categories','tags','popularnews',
+                                           'toppopular','menuItems','setting','marquenews'));
 }
 
     public function show($id)
@@ -57,8 +61,9 @@ class WebsiteController extends Controller
         $setting = GeneralSetting::first();
         $categories  = Category::all();
         $tags        = Tags::all();
+        $marquenews = News::latest('id')->take(4)->get();
 
-        return view('frontend.postshow',compact('menuItems', 'view','categories','tags','setting'));
+        return view('frontend.postshow',compact('menuItems', 'view','categories','tags','setting','marquenews'));
 
 
     }
@@ -71,6 +76,7 @@ class WebsiteController extends Controller
         $category    = Category::where('category_name', $category)->firstOrFail();
         $news        = News::where('category_id', $category->id)->get();
         $setting     = GeneralSetting::first();
-        return view('frontend.news.categorynews', compact('news','menuItems','setting'));
+        $marquenews = News::latest('id')->take(4)->get();
+        return view('frontend.news.categorynews', compact('news','menuItems','setting', 'marquenews'));
     }
 }
