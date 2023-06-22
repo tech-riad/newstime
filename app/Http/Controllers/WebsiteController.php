@@ -40,7 +40,7 @@ class WebsiteController extends Controller
 
     // General Seeting
     $setting = GeneralSetting::first();
-    
+
 
 
     return view('frontend.index', compact('news', 'featured','sportsnews','technologynews'
@@ -68,9 +68,9 @@ class WebsiteController extends Controller
     public function showByCategory($category)
     {
         $menuItems   = MenuItem::orderBy('order')->get();
-        $category = Category::where('category_name', $category)->firstOrFail();
-        $news = News::where('category_id', $category->id)->get();
-        $setting = GeneralSetting::first();
+        $category    = Category::where('category_name', $category)->firstOrFail();
+        $news        = News::where('category_id', $category->id)->get();
+        $setting     = GeneralSetting::first();
         return view('frontend.news.categorynews', compact('news','menuItems','setting'));
     }
 }

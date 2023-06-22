@@ -79,6 +79,41 @@
         <script src="{{asset('backend/dist/js/pages/dashboard2.js')}}"></script>
 
 
+        <script src="https://cdn.ckeditor.com/4.21.0/standard-all/ckeditor.js"></script>
+    <script>
+
+            CKEDITOR.replace('editor', {
+            height: 250,
+            extraPlugins: 'colorbutton',
+            contentsCss: [
+        'http://cdn.ckeditor.com/4.21.0/full-all/contents.css',
+        'https://ckeditor.com/docs/ckeditor4/4.21.0/examples/assets/css/format.css'
+      ],
+      // List of text formats available for this editor instance.
+      format_tags: 'p;h1;h2;h3;pre;div',
+      // Custom Heading 1 and Formatted format definitions.
+      format_h1: {
+        element: 'h1',
+        attributes: {
+          'class': 'contentHeader1'
+        }
+      },
+      format_h2: {
+        element: 'h2',
+        attributes: {
+          'class': 'contentHeader2'
+        }
+      },
+      format_pre: {
+        element: 'pre',
+        attributes: {
+          'class': 'formattedCode'
+        }
+      },
+            removeButtons: 'PasteFromWord'
+            });
+
+    </script>
 
 
 

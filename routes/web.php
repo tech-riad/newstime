@@ -31,11 +31,11 @@ Auth::routes();
 Route::get('/contact', [ContactController::class, 'index'])->name('contact');
 
 // Admin Route
+Route::get('/dashboard', [HomeController::class, 'index'])->name('dashboard');
 
 Route::group(['as'=>'admin.','prefix'=>'admin'],function(){
 
 
-    Route::get('/dashboard', [HomeController::class, 'index'])->name('dashboard');
 
 
         Route::post('/message', [MessageController::class, 'store'])->name('message');

@@ -156,7 +156,7 @@
                     <div class="col-lg-8">
                         <div class="mb-3">
                             <label for="notice" class="form-label">Notice</label>
-                            <textarea class="form-control" id="notice" name="notice" rows="10"
+                            <textarea class="form-control" id="editor" name="notice" rows="10"
                                 class="@error('image') is-invalid @enderror">{{@$setting->notice ?? @old('notice')}}</textarea>
 
                             @error('notice')

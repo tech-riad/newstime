@@ -134,21 +134,10 @@
 
 </script>
 
-<script src="https://cdn.ckeditor.com/ckeditor5/35.3.2/classic/ckeditor.js"></script>
 
-<script>
-     ClassicEditor
-        .create(document.querySelector('#editor')).config({
-            uiColor: '#9AB8F3'
-        })
-        .catch(error => {
-            console.error(error);
 
-        });
-    // ClassicEditor.replace( '#editor', {
-    //         language: 'fr',
-    //         uiColor: '#9AB8F3'
-    //     });
-</script>
+
+
+
 
 @endpush
