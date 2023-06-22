@@ -23,7 +23,7 @@ class WebsiteController extends Controller
     // Latest News
 
     $latestTopNews     = News::latest('id')->first();
-    $latestTopsix      = News::latest('id')->skip(1)->take(6)->get();
+    $latestTopsix      = News::latest('id')->skip(4)->take(6)->get();
 
     // All Category
     $categories        = Category::all();
@@ -39,9 +39,9 @@ class WebsiteController extends Controller
     $menuItems         = MenuItem::orderBy('order')->get();
 
     // General Seeting
-    $setting = GeneralSetting::first();
+    $setting           = GeneralSetting::first();
 
-    $marquenews = News::latest('id')->take(4)->get();
+    $marquenews        = News::latest('id')->take(4)->get();
 
 
 
@@ -58,10 +58,10 @@ class WebsiteController extends Controller
         $view        = News::find($id);
         $view->increment('post_view');
 
-        $setting = GeneralSetting::first();
+        $setting     = GeneralSetting::first();
         $categories  = Category::all();
         $tags        = Tags::all();
-        $marquenews = News::latest('id')->take(4)->get();
+        $marquenews  = News::latest('id')->take(4)->get();
 
         return view('frontend.postshow',compact('menuItems', 'view','categories','tags','setting','marquenews'));
 
@@ -76,7 +76,7 @@ class WebsiteController extends Controller
         $category    = Category::where('category_name', $category)->firstOrFail();
         $news        = News::where('category_id', $category->id)->get();
         $setting     = GeneralSetting::first();
-        $marquenews = News::latest('id')->take(4)->get();
+        $marquenews  = News::latest('id')->take(4)->get();
         return view('frontend.news.categorynews', compact('news','menuItems','setting', 'marquenews'));
     }
 }
