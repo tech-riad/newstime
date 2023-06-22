@@ -85,39 +85,27 @@
                         </p>
                     </a>
                 </li>
-
-
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <i class="nav-icon fas fa-book"></i>
-                        <p>
-                            Pages
-                            <i class="fas fa-angle-left right"></i>
-                        </p>
+                    <a href="{{url('/admin/category')}}" class="nav-link">
+                        <i class="fas fa-list nav-icon"></i>
+                        <p>Category</p>
                     </a>
-                    <ul class="nav nav-treeview">
-
-                        <li class="nav-item">
-                            <a href="{{url('/admin/category')}}" class="nav-link">
-                                <i class="fas fa-list nav-icon"></i>
-                                <p>Category</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{{url('/admin/subcategory')}}" class="nav-link">
-                                <i class="fas fa-list nav-icon"></i>
-                                <p>Sub Category</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{{url('/admin/tag')}}" class="nav-link">
-                                <i class="fas fa-list nav-icon"></i>
-                                <p>Tag</p>
-                            </a>
-                        </li>
-
-                    </ul>
                 </li>
+                <li class="nav-item">
+                    <a href="{{url('/admin/subcategory')}}" class="nav-link">
+                        <i class="fas fa-list nav-icon"></i>
+                        <p>Sub Category</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{url('/admin/tag')}}" class="nav-link">
+                        <i class="fas fa-list nav-icon"></i>
+                        <p>Tag</p>
+                    </a>
+                </li>
+
+
+                
 
                 {{-- <li class="nav-item">
                     <a href="#" class="nav-link">
