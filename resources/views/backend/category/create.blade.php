@@ -63,8 +63,5 @@
 </div>
 @endsection
 @push('js')
-<script>
-     $("#accounts_setting").addClass('active');
-     $('#settings-nav').removeClass('d-none');
-</script>
+
 @endpush

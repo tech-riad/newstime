@@ -52,7 +52,7 @@
                                     <tr>
                                         <td>{{$c->category_name}}</td>
                                         <td>{{$c->title}}</td>
-                                        <td>{{$c->description}}</td>
+                                        <td>{!! @$c->description !!}</td>
                                         <td>
                                             <a href="{{route('admin.category.edit',$c->id)}}" class="btn btn-success">Edit</a>
                                             <a href="{{route('admin.category.destroy',$c->id)}}" class="btn btn-danger deleteBtn">Delete</a>
