@@ -15,8 +15,8 @@ class MessageController extends Controller
      */
     public function index()
     {
-        $messages = Message::orderBy('created_at', 'desc')->get();
-        $marquenews = News::latest('id')->take(4)->get();
+        $messages    = Message::orderBy('created_at', 'desc')->get();
+        $marquenews  = News::latest('id')->take(4)->get();
 
         return view('backend.message.message',compact('messages', 'marquenews'));
     }
@@ -48,8 +48,8 @@ class MessageController extends Controller
 
         // Create a new message instance
         $message = new Message();
-        $message->name = $request->name;
-        $message->email = $request->email;
+        $message->name    = $request->name;
+        $message->email   = $request->email;
         $message->subject = $request->subject;
         $message->message = $request->message;
 

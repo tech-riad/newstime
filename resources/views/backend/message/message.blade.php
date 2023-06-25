@@ -101,47 +101,6 @@
 </div>
 <!-- /.content-wrapper -->
 
-<!-- Modal -->
-{{-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Message</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <div class="CustomeInput">
-
-                    <span><h4 style="display:inline-block; width:90px;">Name :</h4> {{@$m->name}}</span>
-
-
-                </div>
-
-                <div class="CustomeInput">
-                    <span for="email"><h4 style="display:inline-block; width:90px;">Email :</h4>{{@$m->email}}</span>
-
-
-                </div>
-
-                <div class="CustomeInput">
-
-                    <span><h4 style="display:inline-block; width:90px;">Message :</h4> {{@$m->message}}</span>
-
-
-
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-
-            </div>
-
-        </div>
-    </div>
-</div> --}}
 
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="shiftModalLabel"
                     aria-hidden="true">
